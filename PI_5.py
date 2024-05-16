@@ -12,7 +12,7 @@ def read_config(file_path):
     config.read(file_path)
     return config
 
-class SMTPClient:
+class PI_5:
     def __init__(self, server, port, username, password):
         self.server = server
         self.port = port
@@ -105,7 +105,7 @@ if __name__ == "__main__":
     smtp_config = config['smtp']
     email_config = config['email']
 
-    client = SMTPClient(
+    client = PI_5(
         smtp_config.get('server'),
         smtp_config.getint('port'),
         smtp_config.get('username'),
